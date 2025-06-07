@@ -31,7 +31,7 @@ Before using this script, ensure the following are installed and configured on y
 
 2.  **Make it Executable:**
     ```bash
-    chmod +x rclone_backup.sh
+    chmod +x incremental-backup.sh
     ```
 
 3.  **Configure Script Variables:** Open `rclone_backup.sh` with a text editor and configure the settings at the top of the file:
@@ -56,7 +56,7 @@ Before using this script, ensure the following are installed and configured on y
 
 You can run the script manually at any time to test it:
 ```bash
-./rclone_backup.sh
+./incremental-backup.sh
 ```
 
 ### Automated Daily Execution with Cron
