@@ -27,14 +27,14 @@ Before using this script, ensure the following are installed and configured on y
 
 ## Setup and Configuration
 
-1.  **Save the Script:** Save the script content to a file on your server, for example, `rclone_backup.sh`.
+1.  **Save the Script:** Save the script content to a file on your server, for example, `incremental-backup.sh`.
 
 2.  **Make it Executable:**
     ```bash
     chmod +x incremental-backup.sh
     ```
 
-3.  **Configure Script Variables:** Open `rclone_backup.sh` with a text editor and configure the settings at the top of the file:
+3.  **Configure Script Variables:** Open `incremental-backup.sh` with a text editor and configure the settings at the top of the file:
 
     -   `SOURCE_DIR`: The absolute path to the local directory you want to back up.
     -   `RCLONE_REMOTE_NAME`: The name of your configured `rclone` remote (e.g., `MyMega`, `GDrive`).
@@ -70,9 +70,9 @@ For automated daily backups, add the script to your crontab.
 
 2.  Add a line to schedule the script. For example, to run it every day at 3:15 AM:
     ```cron
-    15 3 * * * /path/to/your/rclone_backup.sh >/dev/null 2>&1
+    15 3 * * * /path/to/your/incremental-backup.sh >/dev/null 2>&1
     ```
-    -   Replace `/path/to/your/rclone_backup.sh` with the absolute path to your script.
+    -   Replace `/path/to/your/incremental-backup.sh` with the absolute path to your script.
     -   `>/dev/null 2>&1` prevents cron from sending its own emails, as our script has its own notification system. The script's log file will contain all necessary details.
 
 ## How It Works
